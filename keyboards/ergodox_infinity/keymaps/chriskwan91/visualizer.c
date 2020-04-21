@@ -27,7 +27,7 @@ static void get_visualizer_layer_and_color(visualizer_state_t* state) {
     uint8_t layer = biton32(state->status.layer);
     switch(layer) {
         case 0:
-            state->layer_text = "BASE";
+            state->layer_text = "WIN";
             state->target_lcd_color = LCD_COLOR(0, 0, 0);
             break;
         case 1:
@@ -43,7 +43,7 @@ static void get_visualizer_layer_and_color(visualizer_state_t* state) {
             state->target_lcd_color = LCD_COLOR(0, 0, 0);
             break;
         default:
-            state->layer_text = "NONE";
+            state->layer_text = "";
             state->target_lcd_color = LCD_COLOR(0, 0, 0);
             break;
     }
