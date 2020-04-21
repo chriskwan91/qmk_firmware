@@ -5,9 +5,9 @@
 
 enum base {
   _BASE,
+  _MAC,
   _SYMB,
-  _MDIA,
-  _MAC
+  _MDIA
 };
 
 enum custom_keycodes {
@@ -62,6 +62,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_F7,        KC_ENT,  KC_SPACE
     ),
 
+[_MAC] = LAYOUT_ergodox(  // layer 0 : default
+        // left hand
+        KC_GRV,           KC_1,             KC_2,         KC_3,     KC_4,     KC_5,     KC_6,
+        KC_TAB,           KC_Q,             KC_W,         KC_E,     KC_R,     KC_T,     TT(_SYMB),
+        TD(TD_ESC_CAPS),  KC_A,             KC_S,         KC_D,     KC_F,     KC_G,
+        KC_LSPO,          KC_Z,             KC_X,         KC_C,     KC_V,     KC_B,     TD(TD_LBRKT),
+        TO(_BASE),        LGUI(LALT(KC_P)), KC_TRNS,      KC_LCTRL, KC_LALT,
+                                                                    KC_TRNS,  KC_TRNS,
+                                                                                        LCTL(KC_PGUP),
+                                                                    KC_LGUI,  KC_DEL,   LCTL(KC_PGDOWN),
+        // right hand
+        KC_NO,            KC_7,             KC_8,         KC_9,     KC_0,     KC_MINS,      KC_BSPACE,
+        TT(_MDIA),        KC_Y,             KC_U,         KC_I,     KC_O,     KC_P,         KC_BSLASH,
+                          KC_H,             KC_J,         KC_K,     KC_L,     TD(TD_COLON), TD(TD_QUOTE),
+        TD(TD_RBRKT),     KC_N,             KC_M,         KC_COMMA, KC_DOT,   KC_SLASH,     KC_RSPC,
+                          KC_EQL,           KC_LEFT,      KC_UP,    KC_DOWN,  KC_RIGHT,
+        KC_HOME,          KC_END,
+        KC_NO,
+        KC_NO,            KC_ENT,  KC_SPACE
+    ),
+
 // SYMBOLS
 [_SYMB] = LAYOUT_ergodox(
        // left hand
@@ -104,32 +125,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS,
        KC_TRNS, KC_TRNS,
        KC_NO,
-       KC_NO,   KC_TRNS, KC_TRNS
-),
-
+       KC_MS_BTN3,   KC_MS_BTN2, KC_MS_BTN1
+)
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
 // Otherwise, it needs KC_*
-
-[_MAC] = LAYOUT_ergodox(  // layer 0 : default
-        // left hand
-        KC_GRV,           KC_1,             KC_2,         KC_3,     KC_4,     KC_5,     KC_6,
-        KC_TAB,           KC_Q,             KC_W,         KC_E,     KC_R,     KC_T,     TO(_SYMB),
-        TD(TD_ESC_CAPS),  KC_A,             KC_S,         KC_D,     KC_F,     KC_G,
-        KC_LSPO,          KC_Z,             KC_X,         KC_C,     KC_V,     KC_B,     TD(TD_LBRKT),
-        TO(_BASE),        LGUI(LALT(KC_P)), KC_TRNS,      KC_LCTRL, KC_LALT,
-                                                                    KC_TRNS,  KC_TRNS,
-                                                                                        LCTL(KC_PGUP),
-                                                                    KC_LGUI,  KC_DEL,   LCTL(KC_PGDOWN),
-        // right hand
-        KC_NO,            KC_7,             KC_8,         KC_9,     KC_0,     KC_MINS,      KC_BSPACE,
-        TO(_MDIA),        KC_Y,             KC_U,         KC_I,     KC_O,     KC_P,         KC_BSLASH,
-                          KC_H,             KC_J,         KC_K,     KC_L,     TD(TD_COLON), TD(TD_QUOTE),
-        TD(TD_RBRKT),     KC_N,             KC_M,         KC_COMMA, KC_DOT,   KC_SLASH,     KC_RSPC,
-                          KC_EQL,           KC_LEFT,      KC_UP,    KC_DOWN,  KC_RIGHT,
-        KC_HOME,          KC_END,
-        KC_NO,
-        KC_NO,            KC_ENT,  KC_SPACE
-    )
 };
 
 const uint16_t PROGMEM fn_actions[] = {

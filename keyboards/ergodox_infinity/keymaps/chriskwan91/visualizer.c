@@ -31,16 +31,16 @@ static void get_visualizer_layer_and_color(visualizer_state_t* state) {
             state->target_lcd_color = LCD_COLOR(0, 0, 0);
             break;
         case 1:
+            state->layer_text = "MAC";
+            state->target_lcd_color = LCD_COLOR(0, 0, 0);
+            break;
+        case 2:
             state->layer_text = "FN KEYS";
             state->target_lcd_color = LCD_COLOR(0, 0xFF, 0xFF);
             break;
-        case 2:
+        case 3:
             state->layer_text = "MOUSE";
             state->target_lcd_color = LCD_COLOR(84, 0xFF, 0xFF);
-            break;
-        case 3:
-            state->layer_text = "MAC";
-            state->target_lcd_color = LCD_COLOR(0, 0, 0);
             break;
         default:
             state->layer_text = "";
