@@ -1,0 +1,17 @@
+#ifndef CONFIG_USER_H
+#define CONFIG_USER_H
+
+#undef MOUSEKEY_INTERVAL
+#undef MOUSEKEY_TIME_TO_MAX
+#undef MOUSEKEY_MAX_SPEED
+#undef MOUSEKEY_WHEEL_TIME_TO_MAX
+
+#define MOUSEKEY_INTERVAL       20
+#define MOUSEKEY_MAX_SPEED      8
+#define MOUSEKEY_TIME_TO_MAX    20
+#define MOUSEKEY_WHEEL_TIME_TO_MAX 0
+
+#include "../../config.h"
+
+#endif
+
