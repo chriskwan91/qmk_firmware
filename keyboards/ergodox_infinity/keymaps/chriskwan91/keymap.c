@@ -52,11 +52,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                         LALT(KC_PGUP),
                                                                     KC_LALT,  KC_DEL,   LALT(KC_PGDOWN),
         // right hand
-        KC_7,             KC_8,             KC_9,         KC_0,     KC_MINS,  KC_EQL,       KC_BSPACE,
+        KC_PSCREEN,       KC_7,             KC_8,         KC_9,     KC_0,     KC_MINS,      KC_BSPACE,
         TO(_MDIA),        KC_Y,             KC_U,         KC_I,     KC_O,     KC_P,         KC_BSLASH,
                           KC_H,             KC_J,         KC_K,     KC_L,     TD(TD_COLON), TD(TD_QUOTE),
         TD(TD_RBRKT),     KC_N,             KC_M,         KC_COMMA, KC_DOT,   KC_SLASH,     KC_RSPC,
-                          KC_LEFT,          KC_UP,        KC_DOWN,  KC_RIGHT, KC_PSCREEN,
+                          KC_EQL,           KC_LEFT,      KC_UP,    KC_DOWN,  KC_RIGHT,
         KC_HOME,          KC_END,
         KC_F3,
         KC_F7,        KC_ENT,  KC_SPACE
@@ -121,11 +121,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                         LCTL(KC_PGUP),
                                                                     KC_LGUI,  KC_DEL,   LCTL(KC_PGDOWN),
         // right hand
-        KC_7,             KC_8,             KC_9,         KC_0,     KC_MINS,  KC_EQL,       KC_BSPACE,
+        KC_NO,            KC_7,             KC_8,         KC_9,     KC_0,     KC_MINS,      KC_BSPACE,
         TO(_MDIA),        KC_Y,             KC_U,         KC_I,     KC_O,     KC_P,         KC_BSLASH,
                           KC_H,             KC_J,         KC_K,     KC_L,     TD(TD_COLON), TD(TD_QUOTE),
         TD(TD_RBRKT),     KC_N,             KC_M,         KC_COMMA, KC_DOT,   KC_SLASH,     KC_RSPC,
-                          KC_LEFT,          KC_UP,        KC_DOWN,  KC_RIGHT, KC_NO,
+                          KC_EQL,           KC_LEFT,      KC_UP,    KC_DOWN,  KC_RIGHT,
         KC_HOME,          KC_END,
         KC_NO,
         KC_NO,            KC_ENT,  KC_SPACE
